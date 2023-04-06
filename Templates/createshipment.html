@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/CSS/navbar.css">
+    <title>SCMXPert | Create New Shipment</title>
+    
+<link rel="stylesheet" href="../static/CSS/createshipment.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav id="navigationBarContainer">
+            <ul>
+                <li>
+                    <a href="/dashboard" class="navTop">
+                        <img alt="SCMXPert" src="../static/images/serviceorg.png">
+                        <span>Exafluence</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard" data-path="/dashboard" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/layout-dashboard.svg">
+                        <span class="navMenuName">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/myaccount" data-path="/myaccount" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/user.svg">
+                        <span class="navMenuName">My Account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/myshipment" data-path="/myshipment" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/file-text.svg">
+                        <span class="navMenuName">My Shipment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/createshipment" data-path="/createshipment" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/truck.svg">
+                        <span class="navMenuName">New Shipment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/datastream" data-path="/datastream" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/hard-drive.svg">
+                        <span class="navMenuName">Device Data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" onclick="deleteCookie()" id="logOutMenu" class="navMenu">
+                        <img alt="@" class="navMenuIcon logOutMenuIcon" src="../static/images/log-out.svg">
+                        <span class="navMenuName">Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- adding the HTML of that file  -->
+        
+<div class="createShipmentContainer">
+    <div class="createShipmentHeadiing">
+        <h1 class="formHeading">Create New Shipment </h1>
+        <span class="formDetails">Please fill the all details.</span>
+    </div>
+
+    <div class="createShipmentFormContainer">
+        <form id="createShipmentForm">
+            <div class="fieldContainer shipmentNumberFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="shipmentNumber">Shipment Number*</label>
+                    <input type="text" placeholder="Shipment Number" id="shipmentNumber" name="shipment_number"
+                        maxlength="10">
+                </div>
+                <span class="errorContainer shipmentNumber-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please enter a valid Shipment Number</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer containerNumberFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="containerNumber">Container Number*</label>
+                    <input type="text" placeholder="Container Number" id="containerNumber" name="container_number"
+                        maxlength="10">
+                </div>
+                <span class="errorContainer containerNumber-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please enter a valid Container Number</p>
+                </span>
+            </div>
+
+
+            <div class="fieldContainer routeDetailsFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="routeDetails">Route Details*</label>
+                    <select name="route_details" id="routeDetails">
+                        <option value="defaultValue" id="defaultValue">Select Route</option>
+                        
+                        <option value="USA - New York City, New York">USA - New York City, New York</option>
+                        
+                        <option value="USA - Los Angeles, California">USA - Los Angeles, California</option>
+                        
+                        <option value="USA - Chicago, Illinois">USA - Chicago, Illinois</option>
+                        
+                        <option value="USA - Houston, Texas">USA - Houston, Texas</option>
+                        
+                        <option value="USA - Phoenix, Arizona">USA - Phoenix, Arizona</option>
+                        
+                        <option value="USA - Philadelphia, Pennsylvania">USA - Philadelphia, Pennsylvania</option>
+                        
+                    </select>
+                </div>
+                <span class="errorContainer routeDetails-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please select a route</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer goodsTypeFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="goodsType">Goods Type*</label>
+                    <select name="goods_type" id="goodsType">
+                        <option value="defaultValue">Select Goods</option>
+                        
+                        <option value="E-Commerce">E-Commerce</option>
+                        
+                        <option value="Pharmaceutical">Pharmaceutical</option>
+                        
+                        <option value="Textiles">Textiles</option>
+                        
+                        <option value="Edibles">Edibles</option>
+                        
+                        <option value="Electronics">Electronics</option>
+                        
+                    </select>
+                </div>
+                <span class="errorContainer goodsType-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please select a Goods Type</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer deviceFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="device">Device*</label>
+                    <select name="device" id="device">
+                        <option value="defaultValue">Select Device</option>
+                        
+                        <option value="4587352479">4587352479</option>
+                        
+                        <option value="4587434500">4587434500</option>
+                        
+                        <option value="4582399345">4582399345</option>
+                        
+                        <option value="4775432378">4775432378</option>
+                        
+                        <option value="3445678332">3445678332</option>
+                        
+                        <option value="3423778950">3423778950</option>
+                        
+                        <option value="3357688109">3357688109</option>
+                        
+                        <option value="3890564567">3890564567</option>
+                        
+                    </select>
+                </div>
+                <span class="errorContainer device-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please select a Device</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer expectedDeliveryDateFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="expectedDeliveryDate">Expected Delivery Date*</label>
+                    <input type="date" value="2000-01-20" id="expectedDeliveryDate" name="expected_delivery_date">
+                </div>
+                <span class="errorContainer expectedDeliveryDate-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please select a date</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer poNumberFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="poNumber">PO Number*</label>
+                    <input type="text" placeholder="PO Number" id="poNumber" name="po_number" maxlength="10">
+                </div>
+                <span class="errorContainer poNumber-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please enter a valid PO Number</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer deliveryNumberFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="deliveryNumber">Delivery Number*</label>
+                    <input type="text" placeholder="Delivery Number" id="deliveryNumber" name="delivery_number"
+                        maxlength="10">
+                </div>
+                <span class="errorContainer deliveryNumber-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please enter a valid Delivery Number</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer ndcNumberFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="ndcNumber">NDC Number*</label>
+                    <input type="text" placeholder="NDC Number" id="ndcNumber" name="ndc_number" maxlength="10">
+                </div>
+                <span class="errorContainer ndcNumber-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please enter a valid NDC Number</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer batchIdFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="batchId">Batch Id*</label>
+                    <input type="text" placeholder="Batch Id" id="batchId" name="batch_id" maxlength="10">
+                </div>
+                <span class="errorContainer batchId-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please enter a valid Batch Id</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer serialNumberOfGoodsFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="serialNumberOfGoods">Serial number of Goods*</label>
+                    <input type="text" placeholder="Serial number of Goods" id="serialNumberOfGoods"
+                        name="serial_number_of_goods" maxlength="10">
+                </div>
+                <span class="errorContainer serialNumberOfGoods-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please enter a valid Serial number of Goods</p>
+                </span>
+            </div>
+
+            <div class="fieldContainer shipmentDescriptionFieldContainer">
+                <div class="inputFieldContainer">
+                    <label for="shipmentDescription">Shipment Description*</label>
+                    <textarea placeholder="Shipment Description" id="shipmentDescription" name="shipment_description"
+                        cols="23" rows="5"></textarea>
+                </div>
+                <span class="errorContainer shipmentDescription-error">
+                    <img alt="@" class="errorIcon" src="../static/images/alert-circle.svg">
+                    <p class="errorText">Please enter valid Description</p>
+                </span>
+            </div>
+
+            <div class="formButtonsContainer">
+                <button class="createShipmentButton" type="button" onclick="createNewShipment()">Create
+                    Shipment</button>
+                <button class="clearDetailsButton" type="reset">Clear Details</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="popup">
+
+</div>
+
+    </main>
+
+
+    <!-- adding the JS of that file  -->
+    
+<script src="../static/JS/create_shipment.js"></script>
+
+
+    <script>
+        // Add active class to the current Tab in Side Navigation Bar (highlight it) by creating a new veriable "data-path"
+        const links = document.querySelectorAll('.navMenu');
+        if (links.length > 0) {
+            links.forEach((link) => {
+                if (link.dataset.path === location.pathname) {
+                    link.classList.add('activeNavMenu')
+                }
+            });
+        }
+
+        // Delete the value of "email" cookie on logout
+        function deleteCookie() {
+            document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(../images/Grad_18.png);
+    background-position-x: -400px;
+    background-position-y: -400px;
+    background-repeat: no-repeat;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#sideNavBarPlaceHolder:hover{
+    width: 225px;
+    transition: all 0.2s ease;
+}
+
+.createShipmentContainer {
+    background: rgba(255, 255, 255, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.createShipmentHeadiing {
+    background-color: transparent;
+    width: 100vw;
+    height: 16vh;
+    position: relative;
+}
+
+.createShipmentHeadiing .formHeading {
+    position: fixed !important;
+    background-color: rgba(238, 238, 238, 0.95);
+    width: 100vw;
+    height: 12vh;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createShipmentHeadiing .formDetails {
+    position: absolute;
+    background-color: rgba(238, 238, 238, 0.75);
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 300;
+    width: 100vw;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.createShipmentFormContainer {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 -8px 10px rgba(0, 0, 0, 0.05),
+        0 8px 10px rgba(0, 0, 0, 0.05);
+    margin: 20px 0 30px;
+    width: 1000px;
+    
+}
+
+#createShipmentForm {
+    background: transparent;
+    padding: 50px 50px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 60px;
+}
+
+#createShipmentForm .fieldContainer {
+    position: relative;
+    margin-bottom: -2px;
+    width: 45%;
+}
+
+#createShipmentForm .inputFieldContainer {
+    position: relative;
+    width: 100%;
+}
+
+#createShipmentForm .inputFieldContainer label {
+    font-size: 15px;
+    padding: 0 2px;
+}
+
+#createShipmentForm .inputFieldContainer input {
+    background-color: rgb(238, 238, 238);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 10px 18px;
+    font-weight: 500;
+    width: 100%;
+    height: 43px;
+    border: 1px solid rgb(238, 238, 238);
+}
+
+#createShipmentForm input:focus {
+    outline: none;
+    border: 1px solid #3f3f3fc0;
+}
+
+#createShipmentForm .invalidInput input {
+    border-color: rgba(218, 49, 37, 0.7) !important;
+}
+
+#createShipmentForm .inputFieldContainer select {
+    background-color: #eee;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 10px 18px;
+    width: 100%;
+    height: 43px;
+    font-weight: 500;
+    border: 1px solid rgb(238, 238, 238);
+    cursor: pointer;
+}
+
+#createShipmentForm .inputFieldContainer select:focus {
+    outline: none;
+    border: 1px solid #3f3f3fc0;
+}
+
+#createShipmentForm .invalidInput select {
+    border-color: rgba(218, 49, 37, 0.7) !important;
+}
+
+#createShipmentForm .inputFieldContainer textarea {
+    background-color: #eee;
+    resize: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 10px 18px;
+    width: 100%;
+    height: 91px;
+    font-weight: 500;
+    border: 1px solid rgb(238, 238, 238);
+}
+
+.createShipmentForm textarea:focus {
+    outline: none;
+    border: 1px solid #3f3f3fc0;
+}
+
+#createShipmentForm .invalidInput textarea {
+    border-color: rgba(218, 49, 37, 0.7) !important;
+}
+
+#createShipmentForm .fieldContainer .errorContainer {
+    display: flex;
+    align-items: center;
+    color: #d93025;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+#createShipmentForm .invalidInput .errorContainer {
+    visibility: visible;
+}
+
+#createShipmentForm .fieldContainer .errorIcon {
+    margin: 0 6px 0 2px;
+    width: 12px;
+}
+
+.formButtonsContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 20px 0 0;
+    column-gap: 155px;
+}
+
+.formButtonsContainer button {
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 9px 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 25%;
+    transition: all 30ms ease-in;
+}
+
+.createShipmentButton {
+    background: linear-gradient(to right, #3548ea, #237fdb);
+    box-shadow: 0px 8px 15px rgb(156, 186, 251);
+}
+
+.createShipmentButton:hover {
+    cursor: pointer;
+    transform: translateY(-1px) scale(1.01);
+    background: linear-gradient(to right, #23b0db, #35abea);
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
+
+.clearDetailsButton {
+    background: linear-gradient(to right, #e41d1d, #f4354b);
+    box-shadow: 0px 8px 15px rgb(251, 177, 177);
+}
+
+.clearDetailsButton:hover {
+    cursor: pointer;
+    transform: translateY(-1px) scale(1.01);
+    background: linear-gradient(to right, #f74156, #ef2121);
+    box-shadow: 0px 15px 20px rgb(253, 159, 159);
+}
+
+.formButtonsContainer button:active {
+    transform: scale(0.95);
+}

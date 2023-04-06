@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../static/CSS/navbar.css">
+    <title>SCMXPert | Dashboard</title>
+    
+<link rel="stylesheet" href="../static/CSS/dshboard.css">
+
+</head>
+
+<body>
+    <header>
+        <nav id="navigationBarContainer">
+            <ul>
+                <li>
+                    <a href="/dashboard" class="navTop">
+                        <img alt="SCMXPert" src="../static/images/serviceorg.png">
+                        <span>Exafluence</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard" data-path="/dashboard" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/layout-dashboard.svg">
+                        <span class="navMenuName">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/myaccount" data-path="/myaccount" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/user.svg">
+                        <span class="navMenuName">My Account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/myshipment" data-path="/myshipment" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/file-text.svg">
+                        <span class="navMenuName">My Shipment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/createshipment" data-path="/createshipment" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/truck.svg">
+                        <span class="navMenuName">New Shipment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/datastream" data-path="/datastream" class="navMenu">
+                        <img alt="@" class="navMenuIcon" src="../static/images/hard-drive.svg">
+                        <span class="navMenuName">Device Data</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" onclick="deleteCookie()" id="logOutMenu" class="navMenu">
+                        <img alt="@" class="navMenuIcon logOutMenuIcon" src="../static/images/log-out.svg">
+                        <span class="navMenuName">Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- adding the HTML of that file  -->
+        
+<div class="containerDashboard">
+    <div class="dashboardHeading">
+        <h1>Hi bala, Welcome to SCMXPertLite</h1>
+    </div>
+    <div class="dashboardSections">
+        <div class="createShipmentDashboardSection" style="text-align: center;">
+            <p class="sectionTitle">To create a New Shipment</p>
+            <button id="shipmentButton" onclick="window.location.href = '/createshipment';">Create
+                Shipment</button>
+        </div>
+
+        <div class="deviceDatStreamDashboardSection"style="text-align: center;">
+            <p class="sectionTitle">To see Device Data Stream.</p>
+            <button id="deviceStreamButton" onclick="window.location.href = '/datastream';">Device Data
+                Stream</button>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+
+    <!-- adding the JS of that file  -->
+    
+    
+
+    <script>
+        // Add active class to the current Tab in Side Navigation Bar (highlight it) by creating a new veriable "data-path"
+        const links = document.querySelectorAll('.navMenu');
+        if (links.length > 0) {
+            links.forEach((link) => {
+                if (link.dataset.path === location.pathname) {
+                    link.classList.add('activeNavMenu')
+                }
+            });
+        }
+
+        // Delete the value of "email" cookie on logout
+        function deleteCookie() {
+            document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+    </script>
+</body>
+</html>

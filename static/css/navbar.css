@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#navigationBarContainer{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 100%;
+    overflow: hidden;
+    /* background: rgba(43, 199, 210, 0.593); */
+    background: rgba(1, 37, 216, 0.592);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter:blur(10px) ;
+    transition: width 0.2s ease;
+    z-index: 5;
+    border: none;
+} 
+
+#navigationBarContainer:hover{
+    width: 225px;
+    transition: all 0.2s ease;
+}
+
+.navTop{
+    display: flex;
+    height: 20px;
+    align-items: center;
+    background-color: rgb(209, 209, 209);
+    transition: all 0.2s ease;
+    height: 75px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    width: 225px;
+    padding: 14px 18px;
+}
+
+.navTop img{
+    width: 50px;
+    position: relative;
+    left: -13px;
+}
+
+.navTop span{
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    left: 8px;
+}
+
+.navMenu{
+    text-decoration: none;
+    position: relative;
+    color: rgb(0, 0, 0);
+    display: table;
+    width: 225px;
+    padding: 14px 18px ;
+    transition: all 0.1s ease;
+}
+
+.navMenu:hover{
+    background-color: rgb(237, 237, 237);
+    transform: scale(1.05);
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -2px 35px rgba(0, 0, 0, 0.3);
+}
+
+.navMenu.activeNavMenu{
+    background-color: rgb(255, 255, 255);
+    transform: translateX(7px) scale(1.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navMenu .navMenuIcon{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    top:2px;
+    font-weight: bold;
+}
+
+.navMenu .navMenuName{
+    position: relative;
+    font-weight: 400;
+    top: -4px;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+#logOutMenu{
+    position: absolute;
+    bottom: 0px;
+    background-color: #f74156;
+    box-shadow: 0px 15px 20px rgb(253, 159, 159)
+}
+
+#logOutMenu:hover{
+    background-color: #fe0623;
+    transform: scale(1.05);
+    box-shadow: 0 2px 35px rgba(253, 159, 159, 0.3);
+    box-shadow: 0 -2px 35px rgba(253, 159, 15, 0.3);
+}
